@@ -38,7 +38,7 @@ jobs:
           build-name: "test_build"
           project-name: "test_project"
       - name: 'BrowserStack App Upload'
-        uses: 'nurdtechie98/github-actions/setup-app-upload@master'
+        uses: 'nurdtechie98/github-actions/upload-app@master'
         with:
           app-path: ./app/build/outputs/apk/production/debug/app-production-debug.apk
           framework: espresso
