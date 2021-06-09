@@ -22,7 +22,7 @@ apply plugin: "com.browserstack.gradle"
 
 browserStackConfig {
     username = "chiragshetty2"
-    accessKey = "ApzKWdixZ2y3LR46JPNT"
+    accessKey = ""
     configFilePath = '/Users/chiragshetty/browserStack/espresso-browserstack/app/bstack-config.json'
 }
 
