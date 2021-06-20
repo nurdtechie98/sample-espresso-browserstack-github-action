@@ -40,9 +40,9 @@ jobs:
       - name: 'BrowserStack App Upload'
         uses: 'nurdtechie98/github-actions/upload-app@master'
         with:
-          app-path: ./app/build/outputs/apk/production/debug/app-production-debug.apk
-          framework: espresso
-          test-suite-path: ./app/build/outputs/apk/androidTest/production/debug/app-production-debug-androidTest.apk
+          app-url: http://testci.browserstack.com:8081/download/locale_ios.ipa
+#           framework: espresso
+#           test-suite-path: ./app/build/outputs/apk/androidTest/production/debug/app-production-debug-androidTest.apk
 #       - name: 'Run tests on browserstack'
 #         uses: 'nurdtechie98/github-actions/run-tests@master'
 #         with:
