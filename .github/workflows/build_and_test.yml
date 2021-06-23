@@ -31,21 +31,21 @@ jobs:
           rm -f ~/.gradle/caches/modules-2/modules-2.lock
           rm -f ~/.gradle/caches/modules-2/gc.properties
       - name: 'BrowserStack Env Setup'
-        uses: 'nurdtechie98/github-actions/setup-env@master'
+        uses: 'browserstack/github-actions/setup-env@master'
         with:
           username:  ${{ secrets.BROWSERSTACK_USERNAME }}
           access-key: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
           build-name: "test_build"
           project-name: "test_project"
       - name: 'BrowserStack App Upload'
-        uses: 'nurdtechie98/github-actions/upload-app@master'
+        uses: 'browserstack/github-actions/upload-app@beta'
         with:
           app-path: ./app/build/outputs/apk/production/debug/app-production-debug.apk
           app-custom-id: prod_debug_app
           framework: espresso
           test-suite-path: ./app/build/outputs/apk/androidTest/production/debug/app-production-debug-androidTest.apk
           test-suite-custom-id: prod_debug_test
-#       - name: 'Run tests on browserstack'
-#         uses: 'nurdtechie98/github-actions/run-tests@master'
-#         with:
-#           config-path: ./.github/test_config.json
+      - name: 'Run tests on browserstack'
+        uses: 'browserstack/github-actions/run-tests@beta'
+        with:
+          config-path: ./.github/test_config.json
