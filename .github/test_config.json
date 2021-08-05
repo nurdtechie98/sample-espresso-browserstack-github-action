@@ -2,5 +2,6 @@
   "devices":["Google Pixel 3-9.0", "Google Pixel 4-11.0", "Samsung Galaxy S8-7.0"],
   "deviceLogs":true,
   "networkLogs":true,
-  "coverage":true
+  "coverage":true,
+  "allowDeviceMockServer": true
 }
